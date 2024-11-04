@@ -1,0 +1,841 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f1f8ff;
+  position: relative;
+}
+.title {
+  font-family: "Pacifico", cursive;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+  --color1: #ffffff;
+  --color2: #fea116;
+  --color3: #0f172b;
+  --back: #f4f3f3;
+  --margin-left: 30px;
+  --margin-right: 30px;
+  --margin-bottom: 10px;
+}
+.contaner {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+/* start header */
+header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--color3);
+  top: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  margin-top: 10px;
+}
+
+header .container h2 {
+  font-size: 30px;
+  padding-left: 30px;
+  color: #fea116;
+}
+header .container h2 i {
+  color: var(--color2);
+  padding-right: 20px;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  text-transform: uppercase;
+}
+
+header nav .fa-bars {
+  font-size: 20px;
+}
+
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 5px;
+}
+
+header nav ul a {
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 20px 10px;
+}
+
+header nav ul a:hover,
+header nav ul .active {
+  border-bottom: 2px solid #fea116;
+}
+header .container .book {
+  background-color: var(--color2);
+  padding: 10px 20px;
+  margin: auto;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header .container .book:hover {
+  background-color: #fab246;
+}
+/* end header */
+/* start landing */
+.landing .contaner {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url(img/bg-hero.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 50px;
+
+  align-items: center;
+  padding-top: 15%;
+}
+.landing .contaner .text {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  animation-name: left;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes left {
+  0% {
+    margin-left: -500px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+
+.landing .text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.landing .text p {
+  width: 85%;
+  margin-bottom: 20px;
+  animation-name: widt;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes widt {
+  0% {
+    width: 43%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.landing .text .bottom {
+  background-color: var(--color2);
+  padding: 10px 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.landing .text .bottom:hover {
+  background-color: #fab246;
+}
+.landing .contaner img {
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  animation-name: return;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes return {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+/* end landing */
+/* start box landing */
+.boxx .contaner {
+  background-color: var(--back);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.boxx .contaner div {
+  width: 90%;
+  margin: auto;
+  background-color: var(--color1);
+  padding: 40px 20px 40px 20px;
+  text-align: left;
+  transition: 0.5s;
+}
+.boxx .contaner div:hover {
+  background-color: var(--color2);
+}
+.boxx i {
+  color: var(--color2);
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.boxx h3 {
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.boxx p {
+  color: #000;
+  font-size: 15px;
+}
+
+.boxx .contaner div:hover p,
+.boxx .contaner div:hover i,
+.boxx .contaner div:hover h3 {
+  color: var(--color1);
+}
+/* end box landing */
+/* start about */
+
+.about .contaner {
+  background-color: var(--back);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+.about .image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 15%;
+  margin-top: 10%;
+}
+.about img {
+  width: 300px;
+}
+.about .big {
+  width: 200px;
+}
+.about .image .one {
+  translate: 30px 0;
+}
+.about .image .two {
+  translate: 80px 5px;
+}
+.about .image .three {
+  translate: -40px 100px;
+}
+.about .image .frour {
+  translate: 8px 105px;
+}
+.about .text {
+  margin-top: 30%;
+  text-align: left;
+  margin-bottom: 20%;
+}
+.about .text .title {
+  color: var(--color2);
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.about .text h2,
+.about .text h2 span {
+  color: #000;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+.about .text h2 span i {
+  color: var(--color2);
+  padding-right: 10px;
+  font-size: 40px;
+}
+.about .text p {
+  max-width: 550px;
+  color: #2b2b2b;
+  padding-bottom: 20px;
+}
+.about .text .father,
+.about .text .father .box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about .text .father h1 {
+  color: var(--color2);
+  font-size: 60px;
+  font-weight: bold;
+}
+.about .text .father .right {
+  margin-left: -50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.about .text .father h4 {
+  color: #2b2b2b;
+  font-size: 15px;
+}
+.about .text .father h2 {
+  font-size: 20px;
+}
+.about .text .father span {
+  background-color: var(--color2);
+  padding: 10px 40px;
+  transition: 0.3s;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.about .text .father span:hover {
+  background-color: #fab246;
+}
+
+/* end about */
+/* start menu */
+.menu .contaner {
+  background-color: var(--back);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.menu .contaner .title {
+  color: var(--color2);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.menu .contaner .title::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: -60px 20px;
+}
+.menu .contaner .title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: 20px 20px;
+}
+.menu .contaner h2 {
+  color: #000;
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.menu .contaner .part {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: center;
+  color: #000;
+  margin-bottom: 30px;
+}
+.menu .contaner .part .box {
+  display: grid;
+  grid-template-columns: auto auto;
+  border-bottom: 2px solid rgb(195, 194, 194);
+  padding-bottom: 10px;
+}
+.menu .contaner .part .box i {
+  color: var(--color2);
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-right: -50px;
+}
+.menu .contaner .part .two {
+  border-bottom: var(--color2) 3px solid;
+}
+
+.menu .contaner .part .box h4 {
+  color: #838383;
+  font-size: 15px;
+  font-weight: 100;
+}
+.menu .contaner .part .box h3 {
+  color: #000;
+}
+.menu .contaner .father {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  padding-top: 20px;
+}
+.menu .contaner .father .son {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  text-align: left;
+  padding: 0 30px 30px 30px;
+}
+.menu .contaner .father .top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.menu .contaner .father .right h4 {
+  text-align: right;
+  color: var(--color2);
+  font-size: 20px;
+  font-weight: bold;
+}
+.menu .contaner .father .right h3 {
+  color: #000;
+  font-size: 20px;
+}
+.menu .contaner .father .right p {
+  color: #838383;
+}
+
+/* end menu */
+/* start Reservation */
+.Reservation .contaner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* padding-bottom: 5%; */
+}
+.Reservation .contaner .image {
+  position: relative;
+}
+.Reservation .contaner .image div {
+  position: absolute;
+  top: 37%;
+  left: 40%;
+}
+.Reservation .contaner .image i {
+  position: absolute;
+  z-index: 6;
+  font-size: 40px;
+  color: #000;
+  background-color: var(--color2);
+  padding: 25px 31px;
+  border-radius: 50%;
+  top: 50%;
+  animation: big 1500ms ease-out infinite;
+}
+@keyframes big {
+  0% {
+    transform: translateX(40%) translateY(35%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(40%) translateY(35%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.Reservation .contaner img {
+  width: 100%;
+  /* margin-top: -22px; */
+  margin-bottom: -5px;
+}
+.Reservation .contaner .form {
+  background-color: #0f172b;
+  padding-bottom: 10%;
+}
+.Reservation .contaner form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.Reservation .contaner .form h2 {
+  color: var(--color2);
+  text-align: left;
+  font-size: 25px;
+  font-weight: 700px;
+  margin-top: 20px;
+  margin-left: 50px;
+  position: relative;
+}
+.Reservation .contaner .form h2::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 3px;
+  translate: 10px 25px;
+}
+
+.Reservation .contaner .form h1 {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.Reservation .contaner .form .top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  /* translate: -1% 0; */
+}
+.Reservation .contaner form .top input,
+.Reservation .contaner form .top select {
+  padding: 10px 0 10px 10px;
+  color: #000;
+  transition: 0.3s;
+  max-width: 100%;
+}
+.Reservation .contaner form .top input:hover,
+.Reservation .contaner form .top select:hover {
+  background-color: #dddddd;
+}
+.Reservation .contaner form .top select,
+.Reservation .contaner form .top select option {
+  color: #000;
+}
+.Reservation textarea {
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #000;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.Reservation textarea:hover {
+  background-color: #dddddd;
+}
+
+.Reservation .save {
+  padding: 20px 0 20px 10px;
+  background-color: var(--color2);
+  font-size: 20px;
+  transition: 0.3s;
+}
+.Reservation .save:hover {
+  background-color: #fab246;
+}
+
+/* end Reservation */
+/* start team */
+.team .contaner {
+  background-color: var(--back);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.team .contaner .title {
+  color: var(--color2);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.team .contaner .title::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: -60px 20px;
+}
+.team .contaner .title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: 20px 20px;
+}
+.team .contaner h2 {
+  color: #000;
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.team .father {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+.team .father .box {
+  background-color: white;
+  margin: auto;
+  padding: 20px 20px 0 20px;
+  /* transition: 2s; */
+}
+.team .father .box img {
+  max-width: 250px;
+  border-radius: 50%;
+}
+.team .father .box h3 {
+  padding: 10px 0;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 800;
+}
+.team .father .box p {
+  color: #838383;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.team .father .box ul {
+  translate: 0 50px;
+  display: none;
+  /* transition: 10s; */
+}
+.team .father .box ul li {
+  background-color: var(--color2);
+  padding: 10px 5px 15px 5px;
+  border-radius: 50% 50% 0 0;
+}
+.team .father .box:hover ul {
+  translate: 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* end team */
+/* start Testimonial */
+.Testimonial .contaner {
+  background-color: var(--back);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.Testimonial .contaner .title {
+  color: var(--color2);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.Testimonial .contaner .title::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: -60px 20px;
+}
+.Testimonial .contaner .title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  width: 40px;
+  height: 4px;
+  translate: 20px 20px;
+}
+.Testimonial .contaner h2 {
+  color: #000;
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.Testimonial .father {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: left;
+}
+
+.Testimonial .father .box {
+  padding: 20px;
+  border: 2px solid #dddddd;
+}
+.Testimonial .father .box img {
+  border-radius: 50%;
+}
+.Testimonial .father .box i {
+  color: var(--color2);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Testimonial .father .box p {
+  color: #838383;
+  margin-bottom: 10px;
+}
+.Testimonial .father .box h3 {
+  color: #000;
+  text-transform: capitalize;
+}
+.Testimonial .father .box small {
+  color: #838383;
+  text-transform: capitalize;
+}
+.Testimonial .father .two i {
+  color: var(--color1);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Testimonial .father .two p {
+  color: var(--color1);
+  margin-bottom: 10px;
+}
+.Testimonial .father .two h3 {
+  color: var(--color1);
+  text-transform: capitalize;
+}
+.Testimonial .father .two small {
+  color: var(--color1);
+  text-transform: capitalize;
+}
+
+.Testimonial .father .two {
+  background-color: var(--color2);
+  padding: 20px;
+  border: none;
+}
+.Testimonial .father .botomm {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+}
+.Testimonial .return ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Testimonial .return ul i {
+  margin-left: 10px;
+  border: 2px solid #cbcbcb;
+  border-radius: 50%;
+  color: var(--back);
+}
+.Testimonial .return ul .two {
+  color: var(--color2);
+  border: none;
+}
+
+/* end Testimonial */
+/* start footar */
+footer .contaner {
+  background-color: #0f172b;
+  padding: 30px 0s;
+  text-align: left;
+}
+footer .title {
+  color: var(--color2);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+footer .top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+  padding: 5% 0;
+  border-bottom: 1px #cbcbcb solid;
+}
+footer .top .one {
+  display: flex;
+  flex-direction: column;
+}
+footer .top .one p {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+footer .top .two p {
+  margin-bottom: 10px;
+}
+footer .top .two p i {
+  margin-right: 10px;
+}
+footer .top .two a {
+  font-size: 12px;
+  padding: 7px 10px;
+  border: 2px solid var(--back);
+  border-radius: 50%;
+  margin-right: 3px;
+  transition: 0.3s;
+}
+footer .top .two a i {
+  transition: 0.3s;
+}
+
+footer .top .two a:hover i {
+  color: var(--color2);
+}
+footer .top .two a:hover {
+  background-color: var(--back);
+}
+
+footer .top .two div {
+  margin-top: 15px;
+}
+footer .top .three h4,
+footer .top .three h5,
+footer .top .three p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+footer .top .four p {
+  margin-bottom: 10px;
+}
+footer .top .four div {
+  background-color: var(--back);
+  border: 1px solid var(--color2);
+  padding: 20px 0 20px 20px;
+  border-radius: 5px;
+}
+footer .top .four input {
+  padding: 10px 0;
+  border: none;
+  font-size: 17px;
+  background-color: var(--back);
+}
+footer .top .four button {
+  background-color: var(--color2);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+}
+footer .bottom {
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+footer .bottom span {
+  color: var(--color2);
+}
+
+/* end footar */
